@@ -1,63 +1,68 @@
-# Iamrabbyte
+# Security Research Portfolio
 
-Independent Security Researcher focused on offensive web security, API security, and adversarial validation.
+Hands-on web application and API security research focused on controlled, evidence-driven validation.
 
-## Offensive Security Focus
+All published work is based on intentionally vulnerable environments, systems I own, or systems where I have explicit authorization to test.
+
+## Selected Case Studies
+
+- [WebSocket Credential Exposure](case-studies/F-001-websocket-credential-exposure.md)
+- [AVIF / Next.js Security Validation](case-studies/F-002-avif-security-validation.md)
+- [Account Recovery Bypass](case-studies/F-003-account-recovery-bypass.md)
+- [Cross-Tenant Authentication](case-studies/F-005-cross-tenant-authentication.md)
+
+## Sample Report
+
+- [Sanitized Penetration Test Report](sample-pentest-report.md)
+
+## Research Focus
 
 - Web application penetration testing
-- API attack surface analysis
-- Authentication & authorization testing
-- Access control and privilege boundary testing
-- Session and token security
+- API security
+- Authentication and authorization
+- Access control
 - Account recovery and identity flows
+- JWT and session security
 - Multi-tenant isolation
+- WebSocket security
 - Vulnerability validation
-- Exploitability assessment
-- Remediation verification
+- Remediation and revalidation
 
-## Selected Research
+## Methodology
 
-Public, sanitized case studies from authorized security testing:
+My workflow is built around reproducible evidence rather than scanner-only findings.
 
-- Account Recovery Bypass
-- Cross-Tenant Authentication
-- AVIF / Next.js Security Validation
+Typical process:
 
-[View Security Research Portfolio](https://github.com/Iamrabbyte/security-research-portfolio)
+1. Define scope and safety boundaries
+2. Establish a baseline or negative control
+3. Map the relevant application or API behavior
+4. Reproduce the suspected security issue
+5. Validate impact using authorized synthetic accounts or test data
+6. Separate confirmed behavior from theoretical exploitability
+7. Restore modified test state where applicable
+8. Document remediation guidance
+9. Revalidate after remediation when possible
 
-## Approach
+## Evidence Handling
 
-I focus on evidence-driven offensive security testing rather than scanner-only findings.
+Public case studies are intentionally sanitized.
 
-My workflow typically includes:
+The following are excluded from public reports where applicable:
 
-- mapping application and API attack surfaces;
-- establishing baseline and negative controls;
-- validating authentication and authorization boundaries;
-- reproducing security-impacting behavior;
-- separating confirmed impact from theoretical exploitability;
-- using synthetic accounts and test data where possible;
-- minimizing unnecessary access to real user information;
-- restoring modified test state after validation;
-- documenting remediation and revalidation results.
+- target domains and URLs
+- credentials
+- session tokens
+- cookies
+- verification values
+- real user information
+- exact exploit inputs
+- sensitive endpoint details
 
-## Current Areas of Interest
-
-- Broken access control
-- Authentication bypass
-- Account takeover paths
-- JWT and session handling
-- API authorization flaws
-- Multi-tenant trust boundaries
-- Framework-level vulnerability validation
-- WebSocket and real-time application security
+This allows findings and methodology to be reviewed without exposing operational target information or reusable attack material.
 
 ## Responsible Testing
 
-All published research is based on systems I own, intentionally vulnerable environments, or systems where I have explicit authorization to assess.
+No real-user access, financial actions, destructive testing, denial-of-service activity, or unnecessary data access is included in the public portfolio.
 
-Sensitive information, credentials, tokens, exact exploit inputs, real user data, and operational target details are excluded from public case studies.
-
----
-
-`root@rabbyte:~# research --scope authorized`
+Where a higher-impact condition could not be safely demonstrated, it is documented as unconfirmed rather than presented as proven.
