@@ -24,6 +24,16 @@ Public, sanitized case studies from authorized security testing:
 - [Account Recovery Bypass](https://github.com/Iamrabbyte/security-research-portfolio/blob/main/case-studies/account-recovery-bypass.md)
 - [Cross-Tenant Authentication](https://github.com/Iamrabbyte/security-research-portfolio/blob/main/case-studies/cross-tenant-authentication.md)
 
+## Security Tools
+
+### JWT Context Inspector
+
+A small Python CLI for decoding JWT header and payload data and reviewing security-relevant context claims such as audience, expiration, issuer, subject, and tenant identifiers.
+
+- [View jwt-context-inspector](https://github.com/Iamrabbyte/jwt-context-inspector)
+
+The tool is intentionally limited to defensive inspection and does not perform token forgery, secret cracking, or authentication bypass attempts.
+
 ## Sample Pentest Report
 
 - [Sanitized Penetration Test Report](https://github.com/Iamrabbyte/security-research-portfolio/blob/main/sample-pentest-report.md)
