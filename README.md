@@ -1,20 +1,21 @@
 # Iamrabbyte
 
-Independent Security Researcher focused on web application and API security.
+Independent Security Researcher focused on offensive web security, API security, and adversarial validation.
 
-## Focus Areas
+## Offensive Security Focus
 
-- Web application security
-- API security
-- Authentication & authorization
-- Access control
-- Session and token handling
-- Account recovery flows
-- Multi-tenant security
+- Web application penetration testing
+- API attack surface analysis
+- Authentication & authorization testing
+- Access control and privilege boundary testing
+- Session and token security
+- Account recovery and identity flows
+- Multi-tenant isolation
 - Vulnerability validation
-- Remediation analysis
+- Exploitability assessment
+- Remediation verification
 
-## Security Research Portfolio
+## Selected Research
 
 Public, sanitized case studies from authorized security testing:
 
@@ -22,22 +23,41 @@ Public, sanitized case studies from authorized security testing:
 - Cross-Tenant Authentication
 - AVIF / Next.js Security Validation
 
-[View my Security Research Portfolio](https://github.com/Iamrabbyte/security-research-portfolio)
+[View Security Research Portfolio](https://github.com/Iamrabbyte/security-research-portfolio)
 
-## Methodology
+## Approach
 
-My work focuses on controlled, evidence-driven validation:
+I focus on evidence-driven offensive security testing rather than scanner-only findings.
 
-- establish a baseline or negative control;
-- reproduce suspected security behavior;
-- validate impact using authorized synthetic accounts or test data;
-- separate confirmed evidence from unverified assumptions;
-- avoid unnecessary access to real user data;
-- restore modified test state where applicable;
-- document remediation guidance.
+My workflow typically includes:
+
+- mapping application and API attack surfaces;
+- establishing baseline and negative controls;
+- validating authentication and authorization boundaries;
+- reproducing security-impacting behavior;
+- separating confirmed impact from theoretical exploitability;
+- using synthetic accounts and test data where possible;
+- minimizing unnecessary access to real user information;
+- restoring modified test state after validation;
+- documenting remediation and revalidation results.
+
+## Current Areas of Interest
+
+- Broken access control
+- Authentication bypass
+- Account takeover paths
+- JWT and session handling
+- API authorization flaws
+- Multi-tenant trust boundaries
+- Framework-level vulnerability validation
+- WebSocket and real-time application security
 
 ## Responsible Testing
 
 All published research is based on systems I own, intentionally vulnerable environments, or systems where I have explicit authorization to assess.
 
-Sensitive information, credentials, tokens, exact exploit inputs, and real user data are excluded from public case studies.
+Sensitive information, credentials, tokens, exact exploit inputs, real user data, and operational target details are excluded from public case studies.
+
+---
+
+`root@rabbyte:~# research --scope authorized`
