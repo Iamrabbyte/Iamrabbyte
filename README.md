@@ -26,6 +26,18 @@ An additional redacted private acknowledgement is preserved in the portfolio as 
 
 It is not presented as formal vendor acceptance or as technical proof of any individual vulnerability.
 
+## Trusted Access
+
+### OpenAI Daybreak Blue
+
+I was approved for OpenAI Daybreak Blue for authorized cybersecurity workflows.
+
+A redacted copy of the approval confirmation is included below. Account-specific and recipient details have been removed.
+
+![Redacted OpenAI Daybreak Blue approval](daybreak-blue-approval-redacted.png)
+
+This confirms Daybreak Blue access only and is not presented as Daybreak Red access or approval.
+
 ## Security Tools
 
 ### JWT Context Inspector
@@ -40,7 +52,18 @@ It highlights claims such as:
 - expiration
 - tenant identifiers
 
-The tool is intentionally focused on inspection and analysis rather than token forgery or authentication bypass.
+The tool also performs lightweight security-oriented review of JWT metadata, including:
+
+- `alg: none`
+- `kid`
+- `jku`
+- `x5u`
+- expired tokens
+- future `nbf`
+- unusually long token lifetimes
+- missing issuer, audience, and tenant-binding context
+
+The project includes automated tests and GitHub Actions CI.
 
 - [View jwt-context-inspector](https://github.com/Iamrabbyte/jwt-context-inspector)
 
