@@ -36,7 +36,6 @@ A redacted copy of the approval confirmation is included below. Account-specific
 
 ![Redacted OpenAI Daybreak Blue approval](daybreak-blue-approval-redacted.png)
 
-This confirms Daybreak Blue access only and is not presented as Daybreak Red access or approval.
 
 ## Security Tools
 
