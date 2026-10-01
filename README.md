@@ -19,10 +19,10 @@ Independent Security Researcher focused on offensive web security, API security,
 
 Public, sanitized case studies from authorized security testing:
 
-- [WebSocket Credential Exposure](https://github.com/Iamrabbyte/security-research-portfolio/blob/main/case-studies/F-001-websocket-credential-exposure.md)
-- [AVIF / Next.js Security Validation](https://github.com/Iamrabbyte/security-research-portfolio/blob/main/case-studies/F-002-avif-security-validation.md)
-- [Account Recovery Bypass](https://github.com/Iamrabbyte/security-research-portfolio/blob/main/case-studies/F-003-account-recovery-bypass.md)
-- [Cross-Tenant Authentication](https://github.com/Iamrabbyte/security-research-portfolio/blob/main/case-studies/F-005-cross-tenant-authentication.md)
+- [WebSocket Credential Exposure](https://github.com/Iamrabbyte/security-research-portfolio/blob/main/case-studies/websocket-credential-exposure.md)
+- [AVIF / Next.js Security Validation](https://github.com/Iamrabbyte/security-research-portfolio/blob/main/case-studies/avif-security-validation.md)
+- [Account Recovery Bypass](https://github.com/Iamrabbyte/security-research-portfolio/blob/main/case-studies/account-recovery-bypass.md)
+- [Cross-Tenant Authentication](https://github.com/Iamrabbyte/security-research-portfolio/blob/main/case-studies/cross-tenant-authentication.md)
 
 ## Sample Pentest Report
 
@@ -36,19 +36,19 @@ My typical workflow:
 
 1. Define scope and safety boundaries
 2. Establish a baseline or negative control
-3. Map the relevant application or API behavior
+3. Map relevant application and API behavior
 4. Reproduce suspected security issues
 5. Validate impact using authorized synthetic accounts or test data
 6. Separate confirmed behavior from theoretical exploitability
 7. Restore modified test state where applicable
 8. Document remediation guidance
-9. Revalidate findings after remediation when possible
+9. Revalidate findings when possible
 
 ## Evidence Handling
 
 Public research is intentionally sanitized.
 
-I exclude sensitive operational details such as:
+Sensitive operational details such as the following are excluded where applicable:
 
 - target domains and URLs
 - credentials
@@ -58,8 +58,9 @@ I exclude sensitive operational details such as:
 - real user information
 - exact exploit inputs
 - sensitive endpoint details
+- reusable attack material
 
-This allows the technical methodology and findings to be reviewed without exposing reusable attack material or target-specific secrets.
+The goal is to preserve technical methodology and evidence without exposing target-specific secrets or operational details.
 
 ## Responsible Testing
 
