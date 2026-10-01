@@ -1,54 +1,54 @@
-# Security Research Portfolio
+# Iamrabbyte
 
-Hands-on web application and API security research focused on controlled, evidence-driven validation.
+Independent Security Researcher focused on offensive web security, API security, and evidence-driven validation.
 
-All published work is based on intentionally vulnerable environments, systems I own, or systems where I have explicit authorization to test.
-
-## Selected Case Studies
-
-- [WebSocket Credential Exposure](case-studies/F-001-websocket-credential-exposure.md)
-- [AVIF / Next.js Security Validation](case-studies/F-002-avif-security-validation.md)
-- [Account Recovery Bypass](case-studies/F-003-account-recovery-bypass.md)
-- [Cross-Tenant Authentication](case-studies/F-005-cross-tenant-authentication.md)
-
-## Sample Report
-
-- [Sanitized Penetration Test Report](sample-pentest-report.md)
-
-## Research Focus
+## Offensive Security Focus
 
 - Web application penetration testing
-- API security
-- Authentication and authorization
-- Access control
+- API attack surface analysis
+- Authentication and authorization testing
+- Access control and privilege-boundary testing
+- JWT, session, and token security
 - Account recovery and identity flows
-- JWT and session security
 - Multi-tenant isolation
-- WebSocket security
+- WebSocket and real-time application security
 - Vulnerability validation
 - Remediation and revalidation
 
-## Methodology
+## Selected Research
 
-My workflow is built around reproducible evidence rather than scanner-only findings.
+Public, sanitized case studies from authorized security testing:
 
-Typical process:
+- [WebSocket Credential Exposure](https://github.com/Iamrabbyte/security-research-portfolio/blob/main/case-studies/F-001-websocket-credential-exposure.md)
+- [AVIF / Next.js Security Validation](https://github.com/Iamrabbyte/security-research-portfolio/blob/main/case-studies/F-002-avif-security-validation.md)
+- [Account Recovery Bypass](https://github.com/Iamrabbyte/security-research-portfolio/blob/main/case-studies/F-003-account-recovery-bypass.md)
+- [Cross-Tenant Authentication](https://github.com/Iamrabbyte/security-research-portfolio/blob/main/case-studies/F-005-cross-tenant-authentication.md)
+
+## Sample Pentest Report
+
+- [Sanitized Penetration Test Report](https://github.com/Iamrabbyte/security-research-portfolio/blob/main/sample-pentest-report.md)
+
+## Approach
+
+I focus on reproducible evidence rather than scanner-only findings.
+
+My typical workflow:
 
 1. Define scope and safety boundaries
 2. Establish a baseline or negative control
 3. Map the relevant application or API behavior
-4. Reproduce the suspected security issue
+4. Reproduce suspected security issues
 5. Validate impact using authorized synthetic accounts or test data
 6. Separate confirmed behavior from theoretical exploitability
 7. Restore modified test state where applicable
 8. Document remediation guidance
-9. Revalidate after remediation when possible
+9. Revalidate findings after remediation when possible
 
 ## Evidence Handling
 
-Public case studies are intentionally sanitized.
+Public research is intentionally sanitized.
 
-The following are excluded from public reports where applicable:
+I exclude sensitive operational details such as:
 
 - target domains and URLs
 - credentials
@@ -59,10 +59,14 @@ The following are excluded from public reports where applicable:
 - exact exploit inputs
 - sensitive endpoint details
 
-This allows findings and methodology to be reviewed without exposing operational target information or reusable attack material.
+This allows the technical methodology and findings to be reviewed without exposing reusable attack material or target-specific secrets.
 
 ## Responsible Testing
 
-No real-user access, financial actions, destructive testing, denial-of-service activity, or unnecessary data access is included in the public portfolio.
+All published research is based on intentionally vulnerable environments, systems I own, or systems where I have explicit authorization to assess.
 
-Where a higher-impact condition could not be safely demonstrated, it is documented as unconfirmed rather than presented as proven.
+Where higher-impact exploitation cannot be safely demonstrated, I document it as unconfirmed rather than presenting theoretical impact as proven.
+
+## Portfolio
+
+[View the full Security Research Portfolio](https://github.com/Iamrabbyte/security-research-portfolio)
