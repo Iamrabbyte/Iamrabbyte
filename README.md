@@ -1,42 +1,66 @@
 # Iamrabbyte
 
-Independent Security Researcher focused on offensive web security, API security, and evidence-driven validation.
+Independent Security Researcher focused on offensive web security, API security, authentication, authorization, and evidence-driven validation.
 
-## Offensive Security Focus
-
-- Web application penetration testing
-- API attack surface analysis
-- Authentication and authorization testing
-- Access control and privilege-boundary testing
-- JWT, session, and token security
-- Account recovery and identity flows
-- Multi-tenant isolation
-- WebSocket and real-time application security
-- Vulnerability validation
-- Remediation and revalidation
+The research below documents vulnerabilities and security weaknesses I personally identified, validated, and documented during authorized assessments of real-world web applications and APIs.
 
 ## Selected Research
 
-Public, sanitized case studies from authorized security testing:
-
-- [WebSocket Credential Exposure](https://github.com/Iamrabbyte/security-research-portfolio/blob/main/case-studies/websocket-credential-exposure.md)
-- [AVIF / Next.js Security Validation](https://github.com/Iamrabbyte/security-research-portfolio/blob/main/case-studies/avif-security-validation.md)
 - [Account Recovery Bypass](https://github.com/Iamrabbyte/security-research-portfolio/blob/main/case-studies/account-recovery-bypass.md)
 - [Cross-Tenant Authentication](https://github.com/Iamrabbyte/security-research-portfolio/blob/main/case-studies/cross-tenant-authentication.md)
+- [WebSocket Credential Exposure](https://github.com/Iamrabbyte/security-research-portfolio/blob/main/case-studies/websocket-credential-exposure.md)
+- [AVIF / Next.js Security Validation](https://github.com/Iamrabbyte/security-research-portfolio/blob/main/case-studies/avif-security-validation.md)
+
+Each public case study is sanitized to remove target-specific secrets, credentials, user data, and reusable exploitation details.
+
+## Evidence
+
+The portfolio includes separate redacted validation records preserving technical observations such as negative controls, HTTP state transitions, authentication behavior, revalidation results, and impact boundaries.
+
+- [Account Recovery Validation Evidence](https://github.com/Iamrabbyte/security-research-portfolio/blob/main/evidence/account-recovery-validation-redacted.md)
+- [Cross-Tenant Validation Evidence](https://github.com/Iamrabbyte/security-research-portfolio/blob/main/evidence/cross-tenant-validation-redacted.md)
+- [WebSocket Validation Evidence](https://github.com/Iamrabbyte/security-research-portfolio/blob/main/evidence/websocket-validation-redacted.md)
+- [AVIF Validation Evidence](https://github.com/Iamrabbyte/security-research-portfolio/blob/main/evidence/avif-validation-redacted.md)
+
+An additional redacted private acknowledgement is preserved in the portfolio as supporting context for a real-world research interaction.
+
+It is not presented as formal vendor acceptance or as technical proof of any individual vulnerability.
 
 ## Security Tools
 
 ### JWT Context Inspector
 
-A small Python CLI for decoding JWT header and payload data and reviewing security-relevant context claims such as audience, expiration, issuer, subject, and tenant identifiers.
+A lightweight Python CLI for reviewing JWT header and payload context during authorized security assessments.
+
+It highlights claims such as:
+
+- issuer
+- subject
+- audience
+- expiration
+- tenant identifiers
+
+The tool is intentionally focused on inspection and analysis rather than token forgery or authentication bypass.
 
 - [View jwt-context-inspector](https://github.com/Iamrabbyte/jwt-context-inspector)
-
-The tool is intentionally limited to defensive inspection and does not perform token forgery, secret cracking, or authentication bypass attempts.
 
 ## Sample Pentest Report
 
 - [Sanitized Penetration Test Report](https://github.com/Iamrabbyte/security-research-portfolio/blob/main/sample-pentest-report.md)
+
+## Offensive Security Focus
+
+- Web application penetration testing
+- API security
+- Authentication and authorization testing
+- Access control and privilege boundaries
+- Account recovery and identity flows
+- JWT and session security
+- Multi-tenant isolation
+- WebSocket and real-time application security
+- Vulnerability validation
+- Impact calibration
+- Remediation and revalidation
 
 ## Approach
 
@@ -47,36 +71,48 @@ My typical workflow:
 1. Define scope and safety boundaries
 2. Establish a baseline or negative control
 3. Map relevant application and API behavior
-4. Reproduce suspected security issues
-5. Validate impact using authorized synthetic accounts or test data
-6. Separate confirmed behavior from theoretical exploitability
-7. Restore modified test state where applicable
-8. Document remediation guidance
-9. Revalidate findings when possible
+4. Investigate anomalous behavior
+5. Reproduce suspected security weaknesses
+6. Validate impact using authorized synthetic accounts or test data
+7. Separate confirmed behavior from theoretical exploitability
+8. Restore modified test state where applicable
+9. Document remediation guidance
+10. Revalidate findings when possible
+
+## Evidence Standards
+
+I distinguish between:
+
+- observed behavior
+- confirmed security impact
+- conditional impact
+- theoretical exploitability
+- historical findings that are no longer reproducible
+
+Where higher-impact exploitation cannot be safely demonstrated, I document it as unconfirmed rather than presenting theoretical impact as proven.
 
 ## Evidence Handling
 
-Public research is intentionally sanitized.
-
-Sensitive operational details such as the following are excluded where applicable:
+Public research intentionally excludes sensitive operational material such as:
 
 - target domains and URLs
 - credentials
 - session tokens
 - cookies
+- passwords
 - verification values
 - real user information
 - exact exploit inputs
 - sensitive endpoint details
 - reusable attack material
 
-The goal is to preserve technical methodology and evidence without exposing target-specific secrets or operational details.
+The goal is to make the methodology and validation logic reviewable without exposing target-specific secrets.
 
 ## Responsible Testing
 
-All published research is based on intentionally vulnerable environments, systems I own, or systems where I have explicit authorization to assess.
+All published case studies are based on systems I was explicitly authorized to assess.
 
-Where higher-impact exploitation cannot be safely demonstrated, I document it as unconfirmed rather than presenting theoretical impact as proven.
+Testing documented in the portfolio avoids unnecessary impact and does not include destructive testing, denial-of-service activity, persistence, or unauthorized access to real-user data.
 
 ## Portfolio
 
